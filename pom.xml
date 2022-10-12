@@ -7,8 +7,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>anastasia-fake</groupId>
-            <artifactId>fake-dependency2</artifactId>
+            <groupId>anastasia-fake3</groupId>
+            <artifactId>fake-dependency3</artifactId>
         </dependency>
     </dependencies>
 </project>
