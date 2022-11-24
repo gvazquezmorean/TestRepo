@@ -7,9 +7,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.bouncycastle</groupId>
-            <artifactId>bcprov-jdk16</artifactId>
-            <version>1.38</version>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycload-core</artifactId>
+            <version>14.0.0</version>
         </dependency>
     </dependencies>
 </project>
