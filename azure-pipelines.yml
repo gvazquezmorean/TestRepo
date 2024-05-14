@@ -12,7 +12,7 @@ pool:
 steps:
   - task: NexusIqPipelineTask@1
     inputs:
-      nexusIqService: NexusIQNgrok
+      nexusIqService: NgrokLocalGabi
       applicationId: testapp
       scanTargets: ‘**/*.jar, **/*.war, **/*.ear, **/*.zip, **/*.tar.gz, **’
       stage: Build
