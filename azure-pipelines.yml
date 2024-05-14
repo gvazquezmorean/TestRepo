@@ -10,9 +10,9 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-  - task: NexusIqPipelineTask@1
-    inputs:
-      nexusIqService: NgrokLocalGabi
-      applicationId: testapp
-      scanTargets: ‘**/*.jar, **/*.war, **/*.ear, **/*.zip, **/*.tar.gz, **’
-      stage: Build
+- task: NexusIqPipelineTask@1
+  inputs:
+    nexusIqService: 'NgrokLocalGabi'
+    organizationId: 'a66808ad6c654fd7bdbbb3216d57b87a'
+    applicationId: 'testapp'
+    stage: 'Build'
