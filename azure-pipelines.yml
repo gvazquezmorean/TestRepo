@@ -16,3 +16,5 @@ steps:
     organizationId: 'a66808ad6c654fd7bdbbb3216d57b87a'
     applicationId: 'testapp'
     stage: 'Build'
+    scanTargets: 'pom.xml, **/*.jar, **/*.war, **/*.ear, **/*.zip, **/*.tar.gz, **'
+
