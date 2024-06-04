@@ -12,7 +12,7 @@ pool:
 steps:
 - task: NexusIqPipelineTask@1
   inputs:
-    nexusIqService: 'NgrokLocalGabi'
+    nexusIqService: 'SonatypeSonatypeApp'
     organizationId: 'a66808ad6c654fd7bdbbb3216d57b87a'
     applicationId: 'testapp'
     stage: 'Build'
