@@ -13,7 +13,7 @@ steps:
 - task: NexusIqPipelineTask@1
   inputs:
     nexusIqService: 'SonatypeSonatypeApp'
-    organizationId: 'a66808ad6c654fd7bdbbb3216d57b87a'
+    organizationId: '57fc121d6f8b4b9a89c683f02a699a8f'
     applicationId: 'testdata'
     stage: 'Build'
     scanTargets: 'pom.xml, **/*.jar, **/*.war, **/*.ear, **/*.zip, **/*.tar.gz, **'
