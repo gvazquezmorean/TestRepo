@@ -12,9 +12,9 @@ pool:
 steps:
 - task: NexusIqPipelineTask@1
   inputs:
-    nexusIqService: 'SonatypeSonatypeApp'
-    # organizationId: '57fc121d6f8b4b9a89c683f02a699a8f'
-    applicationId: 'testdata'
+    nexusIqService: 'NgrokLocal'
+    organizationId: 'a66808ad6c654fd7bdbbb3216d57b87a'
+    applicationId: 'testapp'
     stage: 'Build'
     scanTargets: 'pom.xml, **/*.jar, **/*.war, **/*.ear, **/*.zip, **/*.tar.gz, **'
 
