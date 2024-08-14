@@ -10,12 +10,12 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '17'
-    jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'PreInstalled'
-- task: NexusIqPipelineTask@1.7.21
+# - task: JavaToolInstaller@0
+#   inputs:
+#     versionSpec: '17'
+#     jdkArchitectureOption: 'x64'
+#     jdkSourceOption: 'PreInstalled'
+- task: NexusIqPipelineTask@1
   inputs:
     nexusIqService: 'SonatypeSonatypeApp'
     # organizationId: '57fc121d6f8b4b9a89c683f02a699a8f'
