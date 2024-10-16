@@ -20,7 +20,7 @@ steps:
   inputs:
     nexusIqService: 'SonatypeSonatypeApp'
     # organizationId: 'a66808ad6c654fd7bdbbb3216d57b87a'
-    applicationId: 'testapp'
+    applicationId: 'testdata'
     stage: 'Build'
     scanTargets: 'pom.xml, **/*.jar, **/*.war, **/*.ear, **/*.zip, **/*.tar.gz, **'
 
