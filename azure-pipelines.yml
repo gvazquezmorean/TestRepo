@@ -16,6 +16,7 @@ steps:
     versionSpec: '17'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
+
 - task: gmvazquezsonatype.nexus-iq-azure-extension-debug.nexus-iq-azure-pipeline-task.NexusIqPipelineTask@0
   inputs:
     nexusIqService: 'SonatypeSonatypeApp'
@@ -23,4 +24,3 @@ steps:
     applicationId: 'testdata'
     stage: 'Build'
     scanTargets: 'pom.xml, **/*.jar, **/*.war, **/*.ear, **/*.zip, **/*.tar.gz, **'
-
