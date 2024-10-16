@@ -11,6 +11,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '17'
+    jdkArchitectureOption: 'x64'
+    jdkSourceOption: 'PreInstalled'
 - task: gmvazquezsonatype.nexus-iq-azure-extension-debug.nexus-iq-azure-pipeline-task.NexusIqPipelineTask@0
   inputs:
     nexusIqService: 'NgrokLocal'
