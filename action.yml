@@ -1,8 +1,8 @@
 name: 'Gabys GitHub Actions'
-description: 'Identify vulnerabilities in your workflows with Sonatype Github Actions:
+description: 'Identify vulnerabilities in your workflows with Sonatype's security solutions:
  - Evaluate
  - Fetch SBOM
-See usage example below:'
+Usage example below.'
 
 author: 'gvazquezmorean'
 
