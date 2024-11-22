@@ -1,0 +1,58 @@
+name: 'Gabys GitHub Actions'
+description: 'Identify vulnerabilities in your GitHub workflows with Sonatype''s leading security solutions. Fetch SBOMs and run custom analyses.
+Actions:
+- Evaluate
+- Fetch SBOM
+A usage example can be found below:'
+
+author: 'gvazquezmorean'
+
+branding:
+  icon: 'shield'
+  color: 'purple'
+
+# Define your inputs here.
+inputs:
+  iq-server-url:
+    description: 'Lifecycle (IQ Server) URL (e.g. http://localhost:8070).'
+    required: true
+  username:
+    description: 'The username to authenticate with Lifecycle (IQ Server).'
+    required: true
+  password:
+    description: 'The password to authenticate with Lifecycle (IQ Server).'
+    required: true
+  application-id:
+    description:
+      'Lifecycle (IQ Server) application ID. When Automatic Applications is enabled and the application ID has not yet
+      been used, a new application will be created with the given ID.'
+    required: true
+  scan-targets:
+    description:
+      'Space-separated list of paths to specific files, directories, or docker images. Apache Ant-styled patterns are
+      allowed.'
+    required: true
+
+# Define your outputs here.
+outputs:
+  scan-id:
+    value: ${{ steps.run-iq-cli.outputs.scan-id }}
+    description:
+      'Scan id result of the run operation. It can be used to access the Lifecycle report of related artifacts.'
+  report-url:
+    value: ${{ steps.run-iq-cli.outputs.report-url }}
+    description: 'Link to navigate directly to the analysis report in Lifecycle (IQ Server).'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Evaluate
+      id: evaluate
+      uses: sonatype/github-actions/evaluate@main
+      with:
+        iq-server-url: ${{ inputs.iq-server-url }}
+        username: ${{ inputs.username }}
+        password: ${{ inputs.password }}
+        application-id: ${{ inputs.application-id }}
+        scan-targets: ${{ inputs.scan-targets }}
+       
